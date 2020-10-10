@@ -14,14 +14,6 @@ public class PineForest implements Drawable{
         private int xMp;
         private int yMp;
 
-        public int getxMp() {
-            return xMp;
-        }
-
-        public int getyMp() {
-            return yMp;
-        }
-
         public Pine() {
             Random rnd = new Random();
             this.xMp = rnd.nextInt(100);
@@ -43,8 +35,6 @@ public class PineForest implements Drawable{
 
     @Override
     public void draw(Graphics2D g) {
-        Random rand = new Random();
-
         for (Pine pine : pf) {
             int h = height * pine.yMp / 1500;
             int pos = width * pine.xMp / 100;
